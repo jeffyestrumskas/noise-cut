@@ -1,0 +1,11 @@
+# Daily metrics (metrics/run.sh): no model, read-only keys. Change the path if the repo isn't at ~/noise-cut.
+[Unit]
+Description=noise-cut metrics to InfluxDB
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/noise-cut/metrics/run.sh
+NoNewPrivileges=yes
+TimeoutStartSec=30min

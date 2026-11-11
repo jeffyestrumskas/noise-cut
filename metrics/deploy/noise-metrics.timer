@@ -1,0 +1,11 @@
+# Daily: rewrites the last 2 complete days, every filter's effect and the last 3 billed days (idempotent).
+[Unit]
+Description=noise-cut metrics, daily
+
+[Timer]
+OnCalendar=*-*-* 06:00:00 UTC
+RandomizedDelaySec=10min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

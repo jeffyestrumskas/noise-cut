@@ -1,0 +1,28 @@
+# credentials and local CA certificates
+*.env
+*.key
+*.crt
+*.pem
+
+# local data
+.last-candidates.json
+.existing-filters.json
+*.local.md
+*.local.txt
+safety.local.json
+
+__pycache__/
+*.pyc
+*.log
+DISABLED
+*.local.sh
+
+# personal Claude Code notes and settings
+CLAUDE.md
+.claude/
+
+# run output
+runs/
+
+# decision notes
+docs/decisions/
